@@ -22,13 +22,13 @@ body>div {
 #container_2d {
     min-width: max-content;
     flex-grow: 1;
-    /* min-height: 400px;
 
+    /* min-height: 400px;
     position: absolute;
-    left: 100px;
+    left: 70px;
     top: 80px;
-    width: 700px;
-    height: 500px; */
+    width: 500px;
+    height: 700px; */
 }
 
 #testCanvase{
