@@ -1,0 +1,11 @@
+.label-fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 1100ms, opacity 1100ms;
+}
+
+.label-fadeIn {
+    visibility: visible !important; 
+    opacity: 1 !important;
+    transition: visibility 0s linear 0s, opacity 2600ms !important;
+}

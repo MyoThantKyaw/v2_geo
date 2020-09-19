@@ -5,36 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>V2 Geometry</title>
-    
+
+
+    <link href="./styles/icon.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="libs/uiLibs/materialize/css/materialize.min.css"
+        media="screen,projection" />
+    <link rel="stylesheet" href="styles/itemStyle.css" />
     <link rel="stylesheet" href="styles/style.css" />
-    <!-- <script src="../dis/scripts/webfont.js"></script> -->
- 
+
+
+    <script src="./scripts/html2canvas.min.js"></script>
+    <script src="./scripts/anime.min.js"></script>
+    <script src="./scripts/jquery-3.1.1.min.js"></script>
+    <script src="./scripts/jquery-ui.min.js"></script>
+
+
 </head>
 
 <body>
     <div style="font-family: Computer Modern;">.</div>
     <div>
-        <div id="toolbar_top">
+        <!-- <div id="toolbar_top">
             <div id="console">
             </div>
-            <button id="btnStop1">Draw Triangle</button>
-            <button id="btn2">Create Triangle</button>
-        </div> 
+
+            <a id="btnSlide" class="waves-effect waves-light btn-small blue">Btn 1</a>
+        </div> -->
+
         <div id="container_2d">
+            <div id="control_panel">
+                
+                <div style="flex-grow: 1;"></div>
+        
+                <div id="description_panel">
+                    <div class="row card">
+                        <div class="column first_column">
+                            <p>
+                                <span class="procedure_text">အဆင့် </span><span class="procedure_text_no">(၁)</span>
+                            </p>
+                        </div>
+                        <div class="column sec_column">
+                            <p>မျဉ်းပိုင်း AB = 5 cm ကို ဆွဲပါ။</p>
+                        </div>
+                    </div>
+    
+                    <div class="row card">
+                        <div class="column first_column">
+                            <p>
+                                <span class="procedure_text">အဆင့် </span><span class="procedure_text_no">(၂)</span>
+                            </p>
+                        </div>
+                        <div class="column sec_column">
+                            <p>အမှတ် A ၌ &#8736;BAP = 55&#176; ကို ဆွဲပါ။</p>
+                        </div>
+                    </div>
+    
+                    <div class="row card">
+                        <div class="column first_column">
+                            <p><span class="procedure_text">အဆင့် </span><span class="procedure_text_no">(၃)</span></p>
+                        </div>
+                        <div class="column sec_column">
+                            <p>AP ပေါ်၌ မျဉ်းပိုင်း AD = 3 cm ဖြစ်အောင် ပိုင်းဖြတ်ပါ။</p>
+                        </div>
+                    </div>
+    
+                    <div class="row card">
+                        <div class="column first_column">
+                            <p><span class="procedure_text">အဆင့် </span><span class="procedure_text_no">(၄)</span></p>
+                        </div>
+                        <div class="column sec_column">
+                            <p>B ကို ဗဟိုပြု၍ အချင်းဝက် 3 cm ရှိသော အဝန်းပိုင်းကို ဆွဲပါ။</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="row card">
+                        <div class="column first_column">
+                            <p><span class="procedure_text">အဆင့် </span><span class="procedure_text_no">(၅)</span></p>
+                        </div>
+                        <div class="column sec_column">
+                            <p>D ကို ဗဟိုပြု၍ အချင်းဝက် 5 cm ရှိသော အဝန်းပိုင်းကို ဆွဲရာ အဆင့် (၄) တွင် ဆွဲထားသော အဝန်းပိုင်းကို C တွင် ဖြတ်ပါစေ။</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row card">
+                        <div class="column first_column">
+                            <p><span class="procedure_text">အဆင့် </span><span class="procedure_text_no">(၆)</span></p>
+                        </div>
+                        <div class="column sec_column">
+                            <p>B နှင့် C ၊  D နှင့် C တို့ကို ဆက်ပါ။<br/>ဤသို့ဖြင့် လိုအပ်သော အနားပြိုင်စတုဂံ ABCD ကို ရရှိမည်။ </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End of descripition panel -->
+
+                <div id="button_panel">
+                    <div id="buttonRow">
+                        <a id="btn_hide_desc_panel"
+                            class="btn-floating btn-small waves-effect waves-light blue-grey lighten-2"><i
+                                class="material-icons ">keyboard_arrow_down</i></a>
+                        <div style="flex-grow: 1;"></div>
+
+                        <div id="slide_control_panel">
+
+                            <!-- <a id="btnPervious" class="btn-floating btn-small waves-effect waves-light green darken-1"><i
+                                    class="material-icons ">navigate_before</i></a>
+                            <a id="btnReplay" class="btn-floating btn-small waves-effect waves-light green darken-1"><i
+                                    class="material-icons ">replay</i></a> -->
+                            <a id="btnPlay" class="btn-floating btn-medium waves-effect waves-light green darken-1"><i
+                                    id="btnPlayIcon" class="material-icons ">play_arrow</i></a>
+                        </div>
+
+                        <a id="btnHome" class="btn-floating btn-small waves-effect waves-light deep-purple lighten-1"><i
+                                class="material-icons">home</i></a>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-        
-        <div id="toolbar">
-            <button id="btnStop">Home</button>
-        </div> 
-                
-    </div>
 
-    <canvas id="testCanvase">
+        <script type="text/javascript" src="libs/uiLibs/materialize/js/materialize.min.js"></script>
 
-    </canvas>
-    
-    <script src="app_bundle_2d.js"></script>
+        <script src="./scripts/ui_control.js"></script>
+        <script src="app_bundle_2d.js"></script>
+
+
+
 </body>
 
 </html>
