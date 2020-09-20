@@ -110,7 +110,8 @@ body>div {
     bottom: 0px;
     display: flex;
     flex-direction: column;
-    font-size: 15px !important;
+    /* font-size: 2.5vh !important; */
+    /* font-size: 15px !important; */
     line-height: 168%;
     align-items: center;
 }
